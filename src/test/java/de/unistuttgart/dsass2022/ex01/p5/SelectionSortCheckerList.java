@@ -21,12 +21,15 @@ public class SelectionSortCheckerList<T extends Comparable<T>> extends AbstractS
         sortedTestList.append(12);
         sortedTestList.append(14);
         sortedTestList.append(99);
+        sortedTestList.append(3162);
+        sortedTestList.append(989898);
 
         return sortedTestList;
     }
 
     public static SimpleList<Integer> getTestList() {
         SimpleList<Integer> testList = new SimpleList<>();
+        testList.append(989898);
         testList.append(5);
         testList.append(12);
         testList.append(1);
@@ -35,6 +38,7 @@ public class SelectionSortCheckerList<T extends Comparable<T>> extends AbstractS
         testList.append(99);
         testList.append(3);
         testList.append(6);
+        testList.append(3162);
 
         return testList;
     }

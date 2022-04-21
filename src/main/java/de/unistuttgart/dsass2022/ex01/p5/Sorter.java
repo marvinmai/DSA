@@ -1,5 +1,7 @@
 package de.unistuttgart.dsass2022.ex01.p5;
 
+import java.util.List;
+
 public class Sorter {
 
 	/**
@@ -11,7 +13,19 @@ public class Sorter {
 	 *             in the end
 	 */
 	public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
-		
+		int upperBound = list.getSize() - 1;
+		for (int pos = list.getSize() - 1; pos > 0; pos--) {
+			T biggestInBoundaries = list.getElement(0);
+			int indexOfBiggest = 0;
+			for (int i = 1; i <= upperBound; i++) {
+				if (list.getElement(i).compareTo(biggestInBoundaries) > 0) {
+					biggestInBoundaries = list.getElement(i);
+					indexOfBiggest = i;
+				}
+			}
+			list.swapElements(indexOfBiggest, pos);
+			upperBound--;
+		 }
 	}
 
 	/**

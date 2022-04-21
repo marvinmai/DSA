@@ -1,9 +1,10 @@
 package de.unistuttgart.dsass2022.ex01.p5;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleList<T extends Comparable<T>> implements ISimpleList<T> {
+public class SimpleList<T extends Comparable<T>> implements ISimpleList<T>, Serializable {
 
 	private final List<T> list;
 
