@@ -26,7 +26,12 @@ public class SorterTest {
 
     @Test
     public void insertionSort() {
+        SimpleList<Integer> sortedTestList = InsertionSortCheckerList.getSortedTestList();
+        SimpleList<Integer> testList = InsertionSortCheckerList.getTestList();
 
+        Sorter.insertionSort(testList);
+
+        assertEquals(sortedTestList, testList);
     }
 
     @Test

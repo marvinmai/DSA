@@ -39,7 +39,14 @@ public class Sorter {
 	 *             in the end
 	 */
 	public static <T extends Comparable<T>> void insertionSort(ISimpleList<T> list) {
-		
+		for (int pos = 1; pos < list.getSize(); pos++) {
+			for (int i = pos - 1; i >= 0; i--) {
+				T current = list.getElement(i + 1);
+				T swapCandidate = list.getElement(i);
+				if (current.compareTo(swapCandidate) > 0)
+					list.swapElements(i + 1, i);
+			}
+		}
 	}
 
 	/**
