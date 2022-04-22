@@ -1,7 +1,5 @@
 package de.unistuttgart.dsass2022.ex01.p5;
 
-import java.util.List;
-
 public class Sorter {
 
 	/**

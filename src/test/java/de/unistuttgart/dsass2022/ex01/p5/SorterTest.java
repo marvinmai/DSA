@@ -1,15 +1,8 @@
 package de.unistuttgart.dsass2022.ex01.p5;
 
-import static de.unistuttgart.dsass2022.ex01.p5.SelectionSortCheckerList.getSortedTestList;
-import static org.junit.Assert.*;
-
-import junit.framework.Assert;
 import org.junit.Test;
 
-import de.unistuttgart.dsass2022.ex01.p5.ISimpleList;
-import de.unistuttgart.dsass2022.ex01.p5.Sorter;
-
-import java.util.List;
+import static org.junit.Assert.assertEquals;
 
 public class SorterTest {
 
