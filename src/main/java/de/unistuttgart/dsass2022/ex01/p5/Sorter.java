@@ -13,18 +13,20 @@ public class Sorter {
 	 *             in the end
 	 */
 	public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
+		int lowerBound = 0;
 		int upperBound = list.getSize() - 1;
-		for (int pos = list.getSize() - 1; pos > 0; pos--) {
-			T biggestInBoundaries = list.getElement(0);
-			int indexOfBiggest = 0;
-			for (int i = 1; i <= upperBound; i++) {
+		// pos: index of the element which will be swapped with the biggest element from the remaining part of the list
+		for (int pos = 0; pos < list.getSize() - 1; pos++) {
+			T biggestInBoundaries = list.getElement(lowerBound);
+			int indexOfBiggest = lowerBound;
+			for (int i = lowerBound; i <= upperBound; i++) {
 				if (list.getElement(i).compareTo(biggestInBoundaries) > 0) {
 					biggestInBoundaries = list.getElement(i);
 					indexOfBiggest = i;
 				}
 			}
 			list.swapElements(indexOfBiggest, pos);
-			upperBound--;
+			lowerBound++;
 		 }
 	}
 

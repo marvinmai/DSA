@@ -13,16 +13,16 @@ public class SelectionSortCheckerList<T extends Comparable<T>> extends AbstractS
 
     public static SimpleList<Integer> getSortedTestList() {
         SimpleList<Integer> sortedTestList = new SimpleList<>();
-        sortedTestList.append(0);
-        sortedTestList.append(1);
-        sortedTestList.append(3);
-        sortedTestList.append(5);
-        sortedTestList.append(6);
-        sortedTestList.append(12);
-        sortedTestList.append(14);
-        sortedTestList.append(99);
-        sortedTestList.append(3162);
         sortedTestList.append(989898);
+        sortedTestList.append(3162);
+        sortedTestList.append(99);
+        sortedTestList.append(14);
+        sortedTestList.append(12);
+        sortedTestList.append(6);
+        sortedTestList.append(5);
+        sortedTestList.append(3);
+        sortedTestList.append(1);
+        sortedTestList.append(0);
 
         return sortedTestList;
     }
