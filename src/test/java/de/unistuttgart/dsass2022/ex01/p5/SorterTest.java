@@ -36,6 +36,11 @@ public class SorterTest {
 
     @Test
     public void bubbleSort() {
+        SimpleList<Integer> sortedTestList = BubbleSortCheckerList.getSortedTestList();
+        SimpleList<Integer> testList = BubbleSortCheckerList.getTestList();
 
+        Sorter.bubbleSort(testList);
+
+        assertEquals(sortedTestList, testList);
     }
 }
