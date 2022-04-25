@@ -34,12 +34,17 @@ public class SimpleList<T extends Comparable<T>> implements ISimpleList<T>, Seri
 		list.set(j, tmp);
 	}
 
+	/**
+	 * Equality method for testing purposes.
+	 * @param other Object to compare this SimpleList to. Type SimpleList is expected.
+	 * @return true if content of other list AND sorting is the equal.
+	 */
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object other) {
 		boolean isEqual = false;
-		if (obj instanceof SimpleList<?>) {
-			SimpleList<?> other = (SimpleList<?>) obj;
-			isEqual = this.list.equals(other.list);
+		if (other instanceof SimpleList<?>) {
+			SimpleList<?> otherList = (SimpleList<?>) other;
+			isEqual = this.list.equals(otherList.list);
 		}
 		return isEqual;
 	}

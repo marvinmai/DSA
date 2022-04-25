@@ -2,38 +2,42 @@ package de.unistuttgart.dsass2022.ex01.p5;
 
 import org.junit.Test;
 
+import java.util.Map;
+
 import static org.junit.Assert.assertEquals;
 
 public class SorterTest {
 
+    private final Map<SimpleList<Integer>, SimpleList<Integer>> testListCouples;
+
+    public SorterTest() {
+        this.testListCouples = TestListData.getTestListCouples();
+    }
 
     @Test
     public void selectionSort() {
-        SimpleList<Integer> sortedTestList = SelectionSortCheckerList.getSortedTestList();
-        SimpleList<Integer> testList = SelectionSortCheckerList.getTestList();
+        for (Map.Entry<SimpleList<Integer>, SimpleList<Integer>> couple: testListCouples.entrySet()) {
+            Sorter.selectionSort(couple.getKey());
 
-        Sorter.selectionSort(testList);
-
-        assertEquals(sortedTestList, testList);
+            assertEquals(couple.getKey(), couple.getValue());
+        }
     }
 
     @Test
     public void insertionSort() {
-        SimpleList<Integer> sortedTestList = InsertionSortCheckerList.getSortedTestList();
-        SimpleList<Integer> testList = InsertionSortCheckerList.getTestList();
+        for (Map.Entry<SimpleList<Integer>, SimpleList<Integer>> couple: testListCouples.entrySet()) {
+            Sorter.insertionSort(couple.getKey());
 
-        Sorter.insertionSort(testList);
-
-        assertEquals(sortedTestList, testList);
+            assertEquals(couple.getKey(), couple.getValue());
+        }
     }
 
     @Test
     public void bubbleSort() {
-        SimpleList<Integer> sortedTestList = BubbleSortCheckerList.getSortedTestList();
-        SimpleList<Integer> testList = BubbleSortCheckerList.getTestList();
+        for (Map.Entry<SimpleList<Integer>, SimpleList<Integer>> couple: testListCouples.entrySet()) {
+            Sorter.bubbleSort(couple.getKey());
 
-        Sorter.bubbleSort(testList);
-
-        assertEquals(sortedTestList, testList);
+            assertEquals(couple.getKey(), couple.getValue());
+        }
     }
 }
